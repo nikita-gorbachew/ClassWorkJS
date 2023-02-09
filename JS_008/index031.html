@@ -1,0 +1,31 @@
+<div class="content">
+    <button class="btn-add">Добавить</button>
+</div>
+<button class="btn-del">Удалить</button>
+<button class="button3">new button</button>
+<script>
+    const contentEl = document.querySelector('.content');
+    const buttonAdd = document.querySelector('.btn-add');
+    const buttonDel = document.querySelector('.btn-del');
+    const button3El = document.querySelector('.button3');
+
+    const h1El = document.createElement('h1');
+    h1El.textContent = 'Новый элемент';
+
+    buttonAdd.addEventListener('click', function (e) {
+        contentEl.appendChild(h1El);
+    });
+
+    buttonDel.addEventListener('click', function (e) {
+        h1El.remove();
+    });
+
+    button3El.addEventListener('mouseover', function (e) {
+        console.log('навел');
+    });
+
+    button3El.addEventListener('mouseout', function (e) {
+        console.log('убрал');
+    });
+
+</script>
